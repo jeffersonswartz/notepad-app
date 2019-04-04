@@ -1,6 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-html, body {
-    margin: 0;
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  background: #7F00FF;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.ql-container{
+  height: calc(100% - 42px) !important;
+  border: none !important;
+}
+.ql-toolbar {
+  border: none !important;
+}
+
+.p0{
+  padding: 0 !important;
+}
+.hAuto{
+  height: auto !important;
+}
+.h64px{
+  height: 64px !important;
+}
+.mr5{
+  margin-right: 5px !important;
+}
+.ml15{
+  margin-left: 15px !important;
 }

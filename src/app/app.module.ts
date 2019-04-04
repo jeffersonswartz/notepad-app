@@ -11,6 +11,15 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { EditorComponent } from './editor/editor.component';
+import { QuillModule } from 'ngx-quill';
+import { CanvasComponent } from './canvas/canvas.component';
+import { ColorPickerModule } from 'ngx-color-picker';
+
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { DrawComponent } from './draw/draw.component';
+
+const socketConfig: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
 const config = {
   apiKey: 'AIzaSyCFSbkQGmZUuQ7T_UvNiHGd82_xPKUSsqE',
@@ -24,7 +33,10 @@ const config = {
   declarations: [
     AppComponent,
     TodoComponent,
-    LoginComponent
+    LoginComponent,
+    EditorComponent,
+    CanvasComponent,
+    DrawComponent
   ],
   imports: [
     AngularFireModule.initializeApp(config),
@@ -35,7 +47,10 @@ const config = {
     BrowserAnimationsModule,
     MaterialModuleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QuillModule,
+    ColorPickerModule,
+    SocketIoModule.forRoot(socketConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

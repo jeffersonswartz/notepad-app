@@ -1,5 +1,9 @@
 <div >
   <form class="form" [formGroup]="loginForm" fxLayoutAlign="center center" fxLayout="column" class="full-height" (ngSubmit)="isLogin ? login() : create()">
+    <mat-card fxLayoutAlign="center center" fxLayout="column" >
+      <div>
+        Welcome!
+      </div>
     <div>
       <mat-form-field class="full-width">
         <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
@@ -10,9 +14,10 @@
         <input matInput placeholder="Password" formControlName="password" type="password">
       </mat-form-field>
     </div>
-    <div>
+    <div fxLayoutAlign="space-between">
       <button mat-raised-button type="submit" [disabled]="loginForm?.invalid" color="primary">{{isLogin ? 'Submit' : 'Create'}}</button>
-      <button mat-raised-button routerLink="/create" color="accent" *ngIf="isLogin">Create New User</button>
+      <button mat-raised-button routerLink="/create" color="accent" *ngIf="isLogin">New Here!</button>
     </div>
+    </mat-card>
   </form>
 </div>

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
               private authService: AuthService,
               private router: Router) {
                 if (this.authService.isLoggedIn) {
-                  this.router.navigate(['todo']);
+                  this.router.navigate(['editor']);
                 }
   }
 
