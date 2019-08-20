@@ -4,7 +4,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require("path");
 
-var port = 3001;
+var port = process.env.PORT || 3001;
 http.listen(port, function() {
 	console.log('Server running on port ' + port);
 });
