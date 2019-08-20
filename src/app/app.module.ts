@@ -19,7 +19,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { DrawComponent } from './draw/draw.component';
 
-const socketConfig: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
+const socketConfig: SocketIoConfig = { url: 'https://live-pad.herokuapp.com', options: {} };
 
 const config = {
   apiKey: 'AIzaSyCFSbkQGmZUuQ7T_UvNiHGd82_xPKUSsqE',
