@@ -22,12 +22,12 @@ import { DrawComponent } from './draw/draw.component';
 const socketConfig: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
 const config = {
-  apiKey: 'XXXXX',
-  authDomain: 'XXXX',
-  databaseURL: 'XXXXX',
+  apiKey: 'AIzaSyCFSbkQGmZUuQ7T_UvNiHGd82_xPKUSsqE',
+  authDomain: 'livepad-app.firebaseapp.com',
+  databaseURL: 'https://livepad-app.firebaseio.com',
   projectId: 'livepad-app',
-  storageBucket: 'XXXXX',
-  messagingSenderId: 'XXXXXX'
+  storageBucket: 'livepad-app.appspot.com',
+  messagingSenderId: '501213804796'
 };
 @NgModule({
   declarations: [
