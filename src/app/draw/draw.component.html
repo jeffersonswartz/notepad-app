@@ -5,10 +5,11 @@
       <div>Canvas Draw</div>
     </div>
     <div fxLayout="row">
-      <button mat-raised-button color="accent" [matMenuTriggerFor]="menu" *ngIf="name">{{name}}</button>
+      <!-- <button mat-raised-button color="accent" [matMenuTriggerFor]="menu" *ngIf="name">{{name}}</button>
       <mat-menu #menu="matMenu" overlapTrigger="false">
         <button mat-menu-item (click)="logout()">Logout</button>
-      </mat-menu>
+      </mat-menu> -->
+      <button mat-raised-button color="warn" (click)="logout()">Logout</button>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row class="hAuto toolbar">

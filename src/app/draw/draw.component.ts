@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { CanvasComponent } from '../canvas/canvas.component';
 import { Socket } from 'ngx-socket-io';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-draw',
@@ -25,7 +26,7 @@ export class DrawComponent implements OnInit {
 
   @ViewChild('appCanvas') appCanvas: CanvasComponent;
 
-  constructor(public dialog: MatDialog, public socket: Socket) { }
+  constructor(public dialog: MatDialog, public socket: Socket, private authService: AuthService) { }
 
   // Method to set the shape of the object selected
   setShape(shape) {
@@ -47,10 +48,11 @@ export class DrawComponent implements OnInit {
 
   // Method to logout
   logout() {
-    this.name = '';
-    sessionStorage.clear();
-    this.socket.emit('logout');
+    // this.name = '';
+    // sessionStorage.clear();
+    // this.socket.emit('logout');
     this.appCanvas.clearCanvas();
+    this.authService.logout();
     //this.openDialog();
   }
 
