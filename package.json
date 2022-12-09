@@ -25,7 +25,7 @@
     "@angular/platform-browser-dynamic": "~7.2.8",
     "@angular/router": "~7.2.8",
     "core-js": "^2.5.4",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "firebase": "^5.8.6",
     "http": "0.0.0",
     "ngx-color-picker": "^7.5.0",
